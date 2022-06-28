@@ -16,6 +16,7 @@ class NotificationController extends Controller
     {
         //
         $result = Notification::find($id);
+        ///
         return $result;
     }
 

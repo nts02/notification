@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\NotificationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('notification/{id}',[\App\Http\Controllers\NotificationController::class,'index']);
+
+Route::post('sendmail', [MailController::class,'sendEmail']);
+
+Route::get('notification/{id}',[NotificationController::class,'index']);
