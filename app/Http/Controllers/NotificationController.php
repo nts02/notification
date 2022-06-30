@@ -12,7 +12,7 @@ class NotificationController extends Controller
      *
      * @return \Illuminate\Http\Responsephp
      */
-    public function index($id)
+    public function getNotify($id)
     {
         //
         $result = Notification::find($id);

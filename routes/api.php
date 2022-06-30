@@ -23,4 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('sendmail', [MailController::class,'sendEmail']);
 
-Route::get('notification/{id}',[NotificationController::class,'index']);
+Route::get('notification/{id}',[NotificationController::class,'getNotify']);
